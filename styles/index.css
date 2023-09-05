@@ -135,11 +135,12 @@ body {
 
 .second-section {
     margin-left: 15%;
-    padding: 3rem;
-    padding-right: 5rem;
+    padding: 5rem;
+
     background-image: linear-gradient(116deg, rgba(18, 15, 30, 1) 14%, rgba(81, 61, 113, 0.5) 64%), url(../assets/blick.png);
     background-repeat: no-repeat;
     background-size: cover;
+    background-position: 50% 60%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -147,15 +148,14 @@ body {
 }
 
 .second-section>p {
-    max-width: 1260px;
+    width: 100%;
     font-size: 1.5rem;
     margin-bottom: 3rem;
     color: #fff;
     font-weight: 100;
 }
 
-.second-section h2,
-.third-section h2 {
+.second-section h2 {
     padding: 1rem;
     color: var(--third-color);
     font-size: 3rem;
@@ -166,10 +166,12 @@ body {
 
 .card-container {
     display: flex;
-    justify-content: center;
-    gap: 30px;
+    justify-content: space-around;
+
+
     flex-wrap: wrap;
     padding-bottom: 1.5rem;
+    width: 100%;
 
 }
 
@@ -183,6 +185,7 @@ body {
     align-items: center;
     border-radius: 30px;
     background-color: rgba(0, 0, 0, 0.2);
+    margin-bottom: 2rem;
 }
 
 
@@ -214,14 +217,23 @@ body {
 
 .third-section {
     margin-left: 15%;
-    padding: 0 13% 4.5% 4.5%;
-    padding-top: 0;
-    display: flex;
-    align-items: center;
+    padding: 5rem;
+    /* 
+    display: flex; 
+    align-items: center;*/
+    background-image: url(../assets/Meteor.svg);
+
+    background-size: cover;
 
 }
 
-.third-section p {
+.third-section__content {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.third-section .third-section__content p {
     font-size: 1.5rem;
     margin-bottom: 30px;
     color: #fff;
@@ -229,11 +241,17 @@ body {
 
 }
 
-.circuit-container {
-    width: 0;
-    position: relative;
-    z-index: -1;
+.third-section .third-section__content h2 {
+    padding: 1rem;
+    color: var(--third-color);
+    font-size: 3rem;
+    text-align: center;
+
+    width: 100%;
 }
+
+
+
 
 /* ----------------------------- */
 /*     fourth section styles     */
@@ -241,20 +259,24 @@ body {
 
 .fourth-section {
     margin-left: 15%;
-    padding: 4.2%;
+    padding: 5rem;
     padding-top: 0;
     display: flex;
-
+    align-items: center;
     justify-content: space-evenly;
-    flex-wrap: wrap;
+    flex-wrap: wrap-reverse;
 }
 
 .img_phone__container {
-    width: 15%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .img_phone__container img {
-    width: 100%;
+    width: 80%;
+    flex-shrink: 0;
 }
 
 .fourth-section h2 {
@@ -298,4 +320,20 @@ footer {
     width: 100%;
     z-index: 33;
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width : 750px) {
+    .third-section__content {
+        flex-direction: column;
+    }
+
+    .app-buttons button {
+        margin-bottom: 30px;
+    }
+
+    .download-buttons img {
+        margin-bottom: 30px;
+    }
+
+
 }
