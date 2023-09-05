@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/index.css">
 
+
 </head>
 
 <body>
@@ -28,25 +29,48 @@
             </ul>
         </nav>
     </header>
-    <section class="first-Section">
+    <section id="first-Section" class="first-Section">
         <div class="background"></div>
+        <button id="floating-btn">
+            <!-- <img src="ressources/chevron-down.svg" alt=""> -->
+            <svg width="30px" height="30px" viewBox="0 -4.5 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" fill="#000000">
+                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                <g id="SVGRepo_iconCarrier">
+                    <title>arrow_down [#338]</title>
+                    <desc>Created with Sketch.</desc>
+                    <defs> </defs>
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                        <g id="Dribbble-Light-Preview" transform="translate(-220.000000, -6684.000000)" fill="#000000">
+                            <g id="icons" transform="translate(56.000000, 160.000000)">
+                                <path
+                                    d="M164.292308,6524.36583 L164.292308,6524.36583 C163.902564,6524.77071 163.902564,6525.42619 164.292308,6525.83004 L172.555873,6534.39267 C173.33636,6535.20244 174.602528,6535.20244 175.383014,6534.39267 L183.70754,6525.76791 C184.093286,6525.36716 184.098283,6524.71997 183.717533,6524.31405 C183.328789,6523.89985 182.68821,6523.89467 182.29347,6524.30266 L174.676479,6532.19636 C174.285736,6532.60124 173.653152,6532.60124 173.262409,6532.19636 L165.705379,6524.36583 C165.315635,6523.96094 164.683051,6523.96094 164.292308,6524.36583"
+                                    id="arrow_down-[#338]"> </path>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </svg>
+        </button>
     </section>
+
     <aside class="aside-container">
         <div class="aside-logo">
             <img class="aside-logo__img" alt="Logo Kii" src="./assets/logo-01.svg">
         </div>
         <nav class="aside-nav">
             <ul class="aside-nav__list">
-                <li class="aside-nav__item">Porque KII?</li>
-                <li class="aside-nav__item">KII Coin</li>
-                <li class="aside-nav__item">KII Wallet</li>
+                <li class="aside-nav__item"><a href="">Porque KII?</a></li>
+                <li class="aside-nav__item"><a href="">KII Coin</a></li>
+                <li class="aside-nav__item"><a href="">KII Wallet</a></li>
             </ul>
         </nav>
         <div class="aside-circuit">
-            <img src="./assets/circuit.svg" alt="" srcset="">
+            <img src="./assets/Circuit_small.svg" alt="" srcset="">
         </div>
     </aside>
-    <section class="second-section">
+    <section id="second-section" class="second-section">
         <h2> ¿ Porque KII ?</h2>
         <p>
             KII es una criptomoneda construida sobre nuestro nuevo y revolucionario blockchain
@@ -59,7 +83,7 @@
         <div class="card-container">
             <div class="card">
                 <div class="svg-bolt wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg"
+                    <svg class="svg-bolt__item" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                         <path
                             d="M349.4 44.6c5.9-13.7 1.5-29.7-10.6-38.5s-28.6-8-39.9 1.8l-256 224c-10 8.8-13.6 22.9-8.9 35.3S50.7 288 64 288H175.5L98.6 467.4c-5.9 13.7-1.5 29.7 10.6 38.5s28.6 8 39.9-1.8l256-224c10-8.8 13.6-22.9 8.9-35.3s-16.6-20.7-30-20.7H272.5L349.4 44.6z" />
@@ -68,15 +92,13 @@
 
                 <p>Transacciones instantáneas: Todas las transacciones se envían automáticamente y se reciben al
                     instante sin costo adicional que mermen el bolsillo del usuario. KII
-                    permite ahorrar más y vivir mejor.</p>
-
-
-
+                    permite ahorrar más y vivir mejor.
+                </p>
             </div>
 
             <div class="card">
                 <div class="svg-money wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg"
+                    <svg class="svg-money__item" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                         <path
                             d="M320 96H192L144.6 24.9C137.5 14.2 145.1 0 157.9 0H354.1c12.8 0 20.4 14.2 13.3 24.9L320 96zM192 128H320c3.8 2.5 8.1 5.3 13 8.4C389.7 172.7 512 250.9 512 416c0 53-43 96-96 96H96c-53 0-96-43-96-96C0 250.9 122.3 172.7 179 136.4l0 0 0 0c4.8-3.1 9.2-5.9 13-8.4zm84 88c0-11-9-20-20-20s-20 9-20 20v14c-7.6 1.7-15.2 4.4-22.2 8.5c-13.9 8.3-25.9 22.8-25.8 43.9c.1 20.3 12 33.1 24.7 40.7c11 6.6 24.7 10.8 35.6 14l1.7 .5c12.6 3.8 21.8 6.8 28 10.7c5.1 3.2 5.8 5.4 5.9 8.2c.1 5-1.8 8-5.9 10.5c-5 3.1-12.9 5-21.4 4.7c-11.1-.4-21.5-3.9-35.1-8.5c-2.3-.8-4.7-1.6-7.2-2.4c-10.5-3.5-21.8 2.2-25.3 12.6s2.2 21.8 12.6 25.3c1.9 .6 4 1.3 6.1 2.1l0 0 0 0c8.3 2.9 17.9 6.2 28.2 8.4V424c0 11 9 20 20 20s20-9 20-20V410.2c8-1.7 16-4.5 23.2-9c14.3-8.9 25.1-24.1 24.8-45c-.3-20.3-11.7-33.4-24.6-41.6c-11.5-7.2-25.9-11.6-37.1-15l0 0-.7-.2c-12.8-3.9-21.9-6.7-28.3-10.5c-5.2-3.1-5.3-4.9-5.3-6.7c0-3.7 1.4-6.5 6.2-9.3c5.4-3.2 13.6-5.1 21.5-5c9.6 .1 20.2 2.2 31.2 5.2c10.7 2.8 21.6-3.5 24.5-14.2s-3.5-21.6-14.2-24.5c-6.5-1.7-13.7-3.4-21.1-4.7V216z" />
@@ -88,8 +110,8 @@
                     horas del día.</p>
             </div>
             <div class="card">
-                <div class="svg-money wrapper">
-                    <svg xmlns="http://www.w3.org/2000/svg"
+                <div class="svg-lock wrapper">
+                    <svg class="svg-lock__item" xmlns="http://www.w3.org/2000/svg"
                         viewBox="0 0 448 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2023 Fonticons, Inc. -->
                         <path
                             d="M144 144v48H304V144c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192V144C80 64.5 144.5 0 224 0s144 64.5 144 144v48h16c35.3 0 64 28.7 64 64V448c0 35.3-28.7 64-64 64H64c-35.3 0-64-28.7-64-64V256c0-35.3 28.7-64 64-64H80z" />
@@ -102,14 +124,9 @@
 
             </div>
         </div>
-
-
-
-
     </section>
 
-    <section class="third-section">
-
+    <section id="third-section" class="third-section">
         <div class="third-section__content">
             <h2>KII Coin</h2>
             <p>
@@ -121,7 +138,7 @@
         </div>
     </section>
 
-    <section class="fourth-section">
+    <section id="fourth-section" class="fourth-section">
 
         <div class="fourth-section__content">
             <h2>Descarga nuestra wallet</h2>
@@ -144,7 +161,7 @@
 
     <footer></footer>
 
-
+    <script src="./index.js"></script>
 
 </body>
 
