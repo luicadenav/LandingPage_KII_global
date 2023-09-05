@@ -135,7 +135,7 @@ body {
 
 .second-section {
     margin-left: 15%;
-    padding: 5rem;
+    padding: 4.5%;
 
     background-image: linear-gradient(116deg, rgba(18, 15, 30, 1) 14%, rgba(81, 61, 113, 0.5) 64%), url(../assets/blick.png);
     background-repeat: no-repeat;
@@ -217,7 +217,7 @@ body {
 
 .third-section {
     margin-left: 15%;
-    padding: 5rem;
+    padding: 4.5%;
     /* 
     display: flex; 
     align-items: center;*/
@@ -259,7 +259,7 @@ body {
 
 .fourth-section {
     margin-left: 15%;
-    padding: 5rem;
+    padding: 4.5%;
     padding-top: 0;
     display: flex;
     align-items: center;
