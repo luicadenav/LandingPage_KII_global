@@ -59,20 +59,32 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         if( firtsTop <= pulsebtnTop &&  pulsebtnTop< secondTop ){
             Object.assign(pulseButton.style, initalBtnStyles);
+            navList[1].classList.remove('active');
+            navList[2].classList.remove('active');
+            navList[3].classList.remove('active');
             navList[0].classList.add('active');
 
         } else if(secondTop <= pulsebtnTop &&  pulsebtnTop< thirdTop){
             console.log("estoy en secondSection");
             Object.assign(pulseButton.style, btnSecondStyles);
+            navList[0].classList.remove('active');
+            navList[2].classList.remove('active');
+            navList[3].classList.remove('active');
             navList[1].classList.add('active');
 
         } else if(thirdTop <= pulsebtnTop &&  pulsebtnTop< fourthTop){
             console.log("estoy en thirdSection");
             Object.assign(pulseButton.style, btnThirdStyles);
+            navList[1].classList.remove('active');
+            navList[0].classList.remove('active');
+            navList[3].classList.remove('active');
             navList[2].classList.add('active');
         }else {
             console.log("estoy en fourthSection");
             Object.assign(pulseButton.style, btnFourthStyles);
+            navList[1].classList.remove('active');
+            navList[2].classList.remove('active');
+            navList[0].classList.remove('active');
             navList[3].classList.add('active');
         }
         
