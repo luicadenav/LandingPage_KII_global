@@ -17,12 +17,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // for scroll to home 
 
     pulseButton.addEventListener('click',()=>{
-            const section1 = document.querySelector('#first-Section');
-            const section4 = document.querySelector('#fourth-Section');
             if(pulseButton.getAttribute('toHome') == 'true'){
-                section1.scrollIntoView({ behavior: 'smooth' }); 
+                firstSection.scrollIntoView({ behavior: 'smooth' }); 
             }else{
-                section4.scrollIntoView({ behavior: 'smooth' }); 
+                fourthSection.scrollIntoView({ behavior: 'smooth' }); 
             }
             
     });
@@ -66,38 +64,40 @@ document.addEventListener("DOMContentLoaded", function(event) {
         if( firtsTop <= pulsebtnTop &&  pulsebtnTop< secondTop ){
             Object.assign(pulseButton.style, initalBtnStyles);
             pulseButton.setAttribute('toHome','false');
-            navList[1].classList.remove('active');
+
+            addActive(navList,0);
+            /* navList[1].classList.remove('active');
             navList[2].classList.remove('active');
             navList[3].classList.remove('active');
-            navList[0].classList.add('active');
+            navList[0].classList.add('active'); */
 
         } else if(secondTop <= pulsebtnTop &&  pulsebtnTop< thirdTop){
             console.log("estoy en secondSection");
             Object.assign(pulseButton.style, btnSecondStyles);
-            pulseButton.setAttribute('toHome','true');
-            navList[0].classList.remove('active');
-            navList[2].classList.remove('active');
-            navList[3].classList.remove('active');
-            navList[1].classList.add('active');
+            addActive(navList,1);
 
         } else if(thirdTop <= pulsebtnTop &&  pulsebtnTop< fourthTop){
             console.log("estoy en thirdSection");
             Object.assign(pulseButton.style, btnThirdStyles);
             pulseButton.setAttribute('toHome','true');
-            navList[1].classList.remove('active');
-            navList[0].classList.remove('active');
-            navList[3].classList.remove('active');
-            navList[2].classList.add('active');
+            addActive(navList,2);
         }else {
             console.log("estoy en fourthSection");
             Object.assign(pulseButton.style, btnFourthStyles);
             pulseButton.setAttribute('toHome','true');
-            navList[1].classList.remove('active');
-            navList[2].classList.remove('active');
-            navList[0].classList.remove('active');
-            navList[3].classList.add('active');
+            addActive(navList,3);
         }
         
     });
 
 });
+
+function addActive(list,location) {
+    list.forEach((e,i) => {
+                if( i == location){
+                    e.classList.add('active');
+                }else{
+                    e.classList.remove('active');
+                }
+            });
+}
