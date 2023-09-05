@@ -140,6 +140,11 @@ body {
     margin-bottom: 30px;
 }
 
+.aside-nav__item .active {
+    color: var(--secondary-color);
+
+}
+
 .aside-nav__list {
     list-style: none;
 
@@ -147,6 +152,8 @@ body {
 
     font-size: 30px;
 }
+
+
 
 .aside-nav__list a {
     text-decoration: none;
@@ -434,7 +441,10 @@ footer {
     .floating-btn {
         width: 45px;
         height: 45px;
-        right: 40%;
+        right: 3%;
+        bottom: 3%;
+        z-index: 30;
+        opacity: 0.5;
     }
 
     .floating-btn img {

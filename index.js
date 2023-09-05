@@ -2,28 +2,29 @@
 document.addEventListener("DOMContentLoaded", function(event) { 
     const pulseButton = document.getElementById('floating-btn');
     pulseButton.classList.add('floating-btn');
+    console.log("holita1");
 
-console.log("holita1");
-
+    //elements needed
 
     const firstSection = document.querySelector('#first-Section');
     const secondSection = document.querySelector('#second-section');
     const thirdSection = document.querySelector('#third-section');
     const fourthSection = document.querySelector('#fourth-section');
+    const navList = document.querySelectorAll('.link');
     const initalBtnStyles={ ...pulseButton.style};
 
 
-    pulseButton.addEventListener('click',()=>{
-        console.log(window.location.hash);
+    // for scroll to home 
 
-        if (window.location.hash === '#first-Section') {
-            console.log('paseporaca');
+    pulseButton.addEventListener('click',()=>{
             const section = document.querySelector('#first-Section');
-            section.scrollIntoView({ behavior: 'smooth' });
-        }       
+            section.scrollIntoView({ behavior: 'smooth' }); 
     });
 
+    
+    //For changing properties based on location.
 
+    
     window.addEventListener('scroll', () => {
         const firtsTop = firstSection.offsetTop;
         const secondTop = secondSection.offsetTop;
@@ -31,6 +32,8 @@ console.log("holita1");
         const fourthTop = fourthSection.offsetTop;
         const myScrollTop = document.body.scrollTop;
         const pulsebtnTop = pulseButton.offsetTop+myScrollTop;
+     
+        // fixed Button styles  on each section  constants
 
         const btnSecondStyles={
             backgroundColor: '#00f0ff',
@@ -40,9 +43,9 @@ console.log("holita1");
             
         }
         const btnThirdStyles={
-            backgroundColor: '#cd3232',
-            boxShadow: '0 0 0 0 #cd3232',
-            border: '2px solid #cd3232',
+            backgroundColor: 'var(--third-color)',
+            boxShadow: '0 0 0 0 var(--third-color)',
+            border: '2px solid var(--third-color)',
 
         }
         const btnFourthStyles={
@@ -51,27 +54,28 @@ console.log("holita1");
             border: '2px solid var(--extra-color)',
         }
 
-    
+        // Logic for fixing button style on each section.
         
 
-        if( firtsTop <= pulsebtnTop &&  pulsebtnTop< secondTop )
-        {
+        if( firtsTop <= pulsebtnTop &&  pulsebtnTop< secondTop ){
             Object.assign(pulseButton.style, initalBtnStyles);
+            navList[0].classList.add('active');
 
-        } else if(secondTop <= pulsebtnTop &&  pulsebtnTop< thirdTop)
-        {
+        } else if(secondTop <= pulsebtnTop &&  pulsebtnTop< thirdTop){
             console.log("estoy en secondSection");
             Object.assign(pulseButton.style, btnSecondStyles);
+            navList[1].classList.add('active');
 
-        }else if(thirdTop <= pulsebtnTop &&  pulsebtnTop< fourthTop)
-        {
+        } else if(thirdTop <= pulsebtnTop &&  pulsebtnTop< fourthTop){
             console.log("estoy en thirdSection");
             Object.assign(pulseButton.style, btnThirdStyles);
-
+            navList[2].classList.add('active');
         }else {
             console.log("estoy en fourthSection");
             Object.assign(pulseButton.style, btnFourthStyles);
+            navList[3].classList.add('active');
         }
+        
     });
 
 });
