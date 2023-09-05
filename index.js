@@ -17,8 +17,14 @@ document.addEventListener("DOMContentLoaded", function(event) {
     // for scroll to home 
 
     pulseButton.addEventListener('click',()=>{
-            const section = document.querySelector('#first-Section');
-            section.scrollIntoView({ behavior: 'smooth' }); 
+            const section1 = document.querySelector('#first-Section');
+            const section4 = document.querySelector('#fourth-Section');
+            if(pulseButton.getAttribute('toHome') == 'true'){
+                section1.scrollIntoView({ behavior: 'smooth' }); 
+            }else{
+                section4.scrollIntoView({ behavior: 'smooth' }); 
+            }
+            
     });
 
     
@@ -59,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         if( firtsTop <= pulsebtnTop &&  pulsebtnTop< secondTop ){
             Object.assign(pulseButton.style, initalBtnStyles);
+            pulseButton.setAttribute('toHome','false');
             navList[1].classList.remove('active');
             navList[2].classList.remove('active');
             navList[3].classList.remove('active');
@@ -67,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         } else if(secondTop <= pulsebtnTop &&  pulsebtnTop< thirdTop){
             console.log("estoy en secondSection");
             Object.assign(pulseButton.style, btnSecondStyles);
+            pulseButton.setAttribute('toHome','true');
             navList[0].classList.remove('active');
             navList[2].classList.remove('active');
             navList[3].classList.remove('active');
@@ -75,6 +83,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         } else if(thirdTop <= pulsebtnTop &&  pulsebtnTop< fourthTop){
             console.log("estoy en thirdSection");
             Object.assign(pulseButton.style, btnThirdStyles);
+            pulseButton.setAttribute('toHome','true');
             navList[1].classList.remove('active');
             navList[0].classList.remove('active');
             navList[3].classList.remove('active');
@@ -82,6 +91,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
         }else {
             console.log("estoy en fourthSection");
             Object.assign(pulseButton.style, btnFourthStyles);
+            pulseButton.setAttribute('toHome','true');
             navList[1].classList.remove('active');
             navList[2].classList.remove('active');
             navList[0].classList.remove('active');
